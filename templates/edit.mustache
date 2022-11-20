@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>  
+</head>
+<body>  
+    <div class="container" style="padding:15px;border-style:solid;margin-top:10px;border-radius:5px">
+        <form action="edit.php" method="POST">
+        <h1 style="display: inline-block">Edit Student Information</h1>
+        <div class="form-group">
+            <label for="studentId">Student ID</label>
+            <input type="text" class="form-control" id="studentId" name="studentId" placeholder="Student ID" value="{{studentId}}" required>
+        </div>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" value="{{firstName}}" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" value="{{lastName}}" required>
+        </div>
+        <div class="form-group col-3">
+            <label for="birthdate">Birth Date</label>
+            <input type="date" class="form-control" id="birthdate" name="birthdate" placeholder="Pick a date" value="{{birthdate}}" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="{{address}}" required>
+        </div>
+        <div class="form-group">
+            <label for="program">Program</label>
+            <select class="form-select" id="program" name="program">
+                <option value="{{program}}" selected>{{program}}</option>
+                <optgroup label = "________">
+                <option value="BSIT">BSIT</option>
+                <option value="BSCS">BSCS</option>
+                <option value="BMMA">BMMA</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="contactNumber">Contact Number</label>
+            <input type="text" class="form-control" id="contactNumber" name="contactNumber" placeholder="Contact Number" value="{{contactNumber}}" required>
+        </div>
+        <div class="form-group">
+            <label for="emergencyContact">Emergency Contact</label>
+            <input type="text" class="form-control" id="emergencyContact" name="emergencyContact" placeholder="Emergency Contact" value="{{emergencyContact}}" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:20px">Update Student</button>
+        <a href="index.php"><button type="button" class="btn btn-danger" style="margin-top:20px">Cancel</button></a>
+        </form>
+
+    </div>
+</body>
+</html>

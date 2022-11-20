@@ -1,0 +1,18 @@
+{
+    "name": "msi/mongodb_fetch_improved",
+    "autoload": {
+        "psr-4": {
+            "Models\\": ["models/","vendor/autoload.php"]
+        }
+    },
+    "authors": [
+        {
+            "name": "theredhood427",
+            "email": "bangsil.ronrusselle@auf.edu.ph"
+        }
+    ],
+    "require": {
+        "mongodb/mongodb": "^1.12",
+        "mustache/mustache": "^2.14"
+    }
+}
